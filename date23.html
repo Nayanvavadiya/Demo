@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+    body {
+      background-color: lightblue;
+        font-family: "Lato", sans-serif;
+    }
+
+    #name{
+        margin-bottom: 1em;
+    }
+
+    #em{
+        margin-bottom: 1em;
+    }   
+
+    #pass{
+        margin-bottom: 1em;
+    }
+
+    #story{
+        margin-bottom: 2em;
+        
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Input types (text, email, password, submit, etc.) -->
+    <div>
+        <label for="name">Name (4 to 8 characters):</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="4"
+            maxlength="8"
+            size="10" /> 
+    </div>   
+    
+    <div>
+        <label for="em"></label>Email <input id="em" type="email" value="example@.com" />
+    </div>
+
+    <div>
+    <label for="pass">Password (8 characters maximum):</label>
+    <input type="password" id="pass" maxlength="8" required />  
+    </div>
+
+
+    <div>
+        <label for="story">Tell us your innovation:</label>
+            <textarea id="story" name="story" rows="5" cols="33">Innovation in cars enhances safety, efficiency, connectivity
+            </textarea> 
+    </div>
+
+     <button type="button">Add to favorites</button> 
+     
+    <form>
+        <div>
+            <label for="party">Enter date and time for party between 01/05/2025 8:30   AM to 31/05/2025 18:00PM
+            </label>
+                <input 
+                type="datetime-local"
+                id="party" 
+                value="2017-06-1T08:30"
+                min="2017-06-01T08:30"
+                max="2017-06-30T18:00"
+                required 
+                / >
+        </div>
+        <div>
+            <input type="submit" value="Book party">
+        </div>
+    </form><br><br> 
+
+
+    <label for="avatar">Choose a profile picture:</label>
+    <input type="file" id="avatar" name="avatar" accept="pdf/pdf, image/jpeg,.doc,.pdf" />
+    <br></br><br>
+
+    <span style="color: red;font-size: large;">Advanced Forms and Validation:</span> <br><br>
+
+    <input type="button" value="Disable me" disabled />
+
+     <br><br>
+
+    Select dateb for trip : <input
+        type="date"
+        id="start"
+        name="trip-start"
+        value="2018-07-22"
+        min="2018-01-01"
+        max="2018-12-31" /> 
+
+        <BR><BR>
+
+    <form>
+        <div class="group">
+            <input type="text" />
+            <label>Require not shown </label>
+        </div>
+        <div class="group">
+            <input type="text" required />
+            <label>Require shown</label>
+        </div>
+        <input type="submit" />
+    </form>  <br>
+    
+    
+     <span style="color: rgb(134, 0, 252);font-size: large; padding: 30px;">Auto complete</span> <br><br>
+
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" autocomplete="given-name" /><br>
+
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" autocomplete="family-name" /><br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" autocomplete="on" />
+            
+    <header>
+        <h1>This text written using header tag</h1>
+    </header>
+
+    <footer>
+         <p>This text written using footer tag</p>
+    </footer>
+
+    
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try3</title>
+    <style>
+      @layer state {
+  .alert {
+    
+  }
+  p {
+    border: medium solid rgb(17, 255, 17);
+    color: white;
+    background-color: brown;
+  }
+}
+<
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    
+  }
+}@layer state {
+  .alert {
+    
+  }
+  p {
+    border: medium solid limegreen;
+    color: white;
+    background-color: brown;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    
+  }
+}
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="party">Enter a date and time for party (between 01/05/2025 8:00 AM to 31/05/2025 18:00 PM </label>
+            <input 
+            type="datetime-local" 
+            id="party"
+            min="2025-05-01T08:00"
+            max="2025-05-31T18:00"
+            value="2025-05-01T08"
+            required
+            >
+        </div>
+        <div>
+            <input type="submit" value="Book date & time">
+        </div>
+    </form>
+
+    <header>
+         <a class="logo" href="#">Cute Puppies Express!</a>
+    </header>
+
+        <article>
+            <header>
+                <h1>Beagles</h1>
+                <time>08.12.2014</time>
+            </header>
+            <p class="alert">
+                I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+                their ears are so, so snugly soft!
+            </p>
+        </article>
+
+        <table>
+  <thead>
+    <tr>
+      <th scope="col" rowspan="2">Name</th>
+      <th scope="col" rowspan="2">ID</th>
+      <th scope="col" colspan="2">Membership Dates</th>
+      <th scope="col" rowspan="2">Balance</th>
+    </tr>
+    <tr>
+      <th scope="col">Joined</th>
+      <th scope="col">Canceled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Margaret Nguyen</th>
+      <td>427311</td>
+      <td><time datetime="2010-06-03">June 3, 2010</time></td>
+      <td>n/a</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Edvard Galinski</th>
+      <td>533175</td>
+      <td><time datetime="2011-01-13">January 13, 2011</time></td>
+      <td><time datetime="2017-04-08">April 8, 2017</time></td>
+      <td>37.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Hoshi Nakamura</th>
+      <td>601942</td>
+      <td><time datetime="2012-07-23">July 23, 2012</time></td>
+      <td>n/a</td>
+      <td>15.00</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<label for="firstName">First Name:</label>
+<input id="firstName" type="text" autocomplete="given-name" /><br>
+
+<label for="lastName">Last Name:</label>
+<input id="lastName" type="text" autocomplete="family-name" /><br>
+
+<label for="email">Email:</label>
+<input id="email" type="email" autocomplete="on" />
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Apples</td>
+        <td>10</td>
+        <td>5.00</td>
+      </tr>
+      <tr>
+        <td>Bananas</td>
+        <td>6</td>
+        <td>3.00</td>
+      </tr>
+      <tr>
+        <td>Oranges</td>
+        <td>8</td>
+        <td>4.00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Total</strong></td>
+        <td><strong>12.00</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <video controls>
+    <source src="foo-large.webm" media="(min-width: 800px)" />
+    <source src="foo.webm" />
+    I'm sorry; your browser doesn't support HTML video.
+  </video>
+<canvas id="stockGraph" width="150" height="150">
+  current stock price: $3.15 + 0.15
+</canvas>
+
+<canvas id="clock" width="150" height="150">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YYh5Fk1u9VsWWr1MhkyQeOzeNbtnnMO96g&s" width="150" height="150" alt="A clock" />
+</canvas>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YYh5Fk1u9VsWWr1MhkyQeOzeNbtnnMO96g&s" alt="">
+
+
+<canvas id="tutorial" width="150" height="150"></canvas>
+
+
+<canvas width="120" height="120">
+  An alternative text describing what your canvas displays.
+</canvas>
+
+@layer module, state;
+
+
+</body>
+</html>

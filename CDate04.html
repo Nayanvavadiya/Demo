@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CDate 04/06/2025</title>
+
+  <style>
+    /* * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    } */
+
+    body {
+      background-image: url('https://plus.unsplash.com/premium_photo-1701590725824-3d0482721544?fm=jpg&q=60&w=3000');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 8px double rgb(12, 12, 12);
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .emojis {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;  
+      text-align: center;
+    }
+
+    .text-presentation {
+      font-variant-emoji: text;
+      font-size: 2rem;
+    }
+
+    .emoji-presentation {
+      font-variant-emoji: emoji;
+      font-size: 2rem;
+    }
+
+    .wrapper {
+      position: relative;
+      margin: 20px;
+    }
+
+    .dashed-box {
+      border: 2px dashed black;
+      height: 8em;
+      margin: 2em 1em;
+      padding: 1.5%;
+    }
+
+    .gold-box {
+      position: absolute;
+      z-index: 3;
+      background: gold;
+      width: 80%;
+      left: 10%;
+      top: 3em;
+      padding: 1.5%;
+    }
+
+    .green-box {
+      position: absolute;
+      z-index: 2;
+      background: lightgreen;
+      width: 30%;
+      right: 10%;
+      top: -25px;
+      height: 7em;
+      padding: 10px;
+    }
+
+    h1 {
+      display: inline-block;
+      border: 0.3rem solid black;
+      padding: 10px;
+      margin: 2em;
+      background-color: white;
+    }
+
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1em;
+      margin: 2em;
+    }
+
+    #content div {
+      width: 120px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+    }
+
+    .box {
+      flex-shrink: 1;
+    }
+
+    .box4 {
+      flex-shrink: 1.5;
+    }
+
+    .box5 {
+      flex-shrink: 2;
+    }
+
+    @media (max-width: 426px) {
+      body {
+        background-color: rgb(238, 238, 244);
+        background-image: none;
+        margin: 10px;
+      }
+
+      /* h1 {
+        font-size: 1rem;
+        padding: 6px;
+        margin: 1em;
+      } */
+
+      /* #content div {
+        width: 100px;
+        height: 50px;
+      } */
+    }
+  </style>
+</head>
+<body>
+
+  <section class="emojis">
+    <div class="emoji">
+      <h2 style="font-size: 1.2rem; color: rgb(3, 3, 23);">Text presentation</h2>
+      <div class="text-presentation">😎🤓</div>
+    </div>
+    <div class="emoji">
+      <h2 style="font-size: 1.2rem; color: rgb(13, 13, 212);">Emoji presentation</h2>
+      <div class="emoji-presentation">😎🤓</div>
+    </div>
+  </section>
+
+  <div class="wrapper">
+    <div class="dashed-box">Dashed box</div>
+    <div class="gold-box">Gold box</div>
+    <div class="green-box">Green box</div>
+  </div>
+
+  <h1>Flex-shrink</h1>
+
+  <div id="content">
+    <div class="box" style="background-color:red;">A</div>
+    <div class="box" style="background-color:lightblue;">B</div>
+    <div class="box" style="background-color:yellow;">C</div>
+    <div class="box4" style="background-color:lightsalmon;">D</div>
+    <div class="box5" style="background-color:lightgreen;">E</div>
+  </div>
+
+</body>
+</html>

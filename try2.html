@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      margin: 0;
+      text-indent: 3ch;
+    }
+
+    p.pilcrow {
+      text-indent: 0;
+      display: inline;
+    }
+
+    p.pilcrow+p.pilcrow::before {
+      content: " ¶ ";
+    }
+
+
+    [popover] {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    /* Styling the popover when it's open using [popover-open] */
+    [popover][popover-open] {
+      border-color: green;
+      background-color: #e6ffe6;
+    }
+
+        * [lang^="en"] {
+        color: rgb(0, 26, 255);
+        font-size: 30px;
+        }
+
+        *.warning {
+        color: rgb(0, 255, 76);
+        font-size: 30px;
+        }
+
+        *#maincontent {
+        border: 1px solid rgb(255, 255, 255);
+        }
+
+  </style>
+
+</head>
+
+<body>
+  <p>
+    Separating paragraphs with blank lines is easiest for readers to scan, but
+    they can also be separated by indenting their first lines. This is often used
+    to take up less space, such as to save paper in print.
+  </p>
+
+  <p>
+    Writing that is intended to be edited, such as school papers and rough drafts,
+    uses both blank lines and indentation for separation. In finished works,
+    combining both is considered redundant and amateurish.
+  </p>
+
+  <p>
+    In very old writing, paragraphs were separated with a special character: ¶,
+    the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and hard to
+    read.
+  </p>
+
+
+  <p>
+    How hard to read? See for yourself:
+    <button data-toggle-text="Oh no! Switch back!">
+      Use pilcrow for paragraphs
+    </button>
+  </p>
+
+  <article class="forecast">
+    <h1>Weather forecast for Seattle</h1>
+    <article class="day-forecast">
+      <h2>03 March 2018</h2>
+      <p>Rain.</p>
+    </article>
+    <article class="day-forecast">
+      <h2>04 March 2018</h2>
+      <p>Periods of rain.</p>
+    </article>
+    <article class="day-forecast">
+      <h2>05 March 2018</h2>
+      <p>Heavy rain.</p>
+    </article>
+  </article>
+
+  <ul>
+    <li>first item</li>
+    <li>
+      second item
+      <!-- Look, the closing </li> tag is not placed here! -->
+      <ul>
+        <li>second item first subitem</li>
+        <li>
+          second item second subitem
+          <!-- Same for the second nested unordered list! -->
+          <ul>
+            <li>second item second subitem first sub-subitem</li>
+            <li>second item second subitem second sub-subitem</li>
+            <li>second item second subitem third sub-subitem</li>
+          </ul>
+        </li>
+        <!-- Closing </li> tag for the li that
+                  contains the third unordered list -->
+        <li>second item third subitem</li>
+      </ul>
+      <!-- Here is the closing </li> tag -->
+    </li>
+    <li>third item</li>
+  </ul>
+
+
+  <fieldset>
+    <legend>Choose your interests</legend>
+    <div>
+      <input type="checkbox" id="coding" name="interest" value="coding" />
+      <label for="coding">Coding</label>
+    </div>
+    <div>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      <label for="music">Music</label>
+    </div>
+  </fieldset>
+  <select name="timezone" id="timezone">
+    <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
+    <option value="Pacific/Midway">Midway Island, Samoa</option>
+    <option value="Pacific/Honolulu">Hawaii</option>
+    <option value="Pacific/Marquesas">Taiohae</option>
+    <!-- and so on -->
+  </select>
+  
+  <form>
+      <div>
+            <label for="party">
+              Choose your preferred party date and time (required, June 1st 8.30am to
+              June 30th 4.30pm):
+            </label>
+                <input
+                  id="party"
+                  type="datetime-local"
+                  name="party-date"
+                  min="2017-06-01T08:30"
+                  max="2017-06-30T16:30"
+                  required />
+                <span class="validity"></span>
+      </div>
+      <div>
+        <input type="submit" value="Book party!" />
+      </div>
+</form>
+
+
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+
+
+<input type="button" value="Disable me" disabled />
+
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.jpg">
+  <source src="video.mp4" type="video/mp4" />
+  <source src="video.mp4" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="video.mp4">link to the video</a> instead.
+  </p>
+</video>
+
+
+
+
+
+
+
+<button popovertarget="myPopover">Show Popover</button>
+
+<div id="myPopover" popover>
+  Hello! I am a popover.
+</div>
+
+
+<form>
+  <fieldset>
+    <legend>Check shipping details</legend>
+    <div>
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text" value="Mr Soft" readonly />
+    </div>
+    <div>
+      <label for="address">Address: </label>
+      <textarea id="address" name="address" readonly>
+23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA
+</textarea
+      >
+    </div>
+    <div>
+      <label for="postal-code">Zip/postal code: </label>
+      <input
+        id="postal-code"
+        name="postal-code"
+        type="text"
+        value="94708"
+        readonly />
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Final instructions</legend>
+    <div>
+      <label for="sms-confirm">Send confirmation by SMS?</label>
+      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+    </div>
+    <div>
+      <label for="instructions">Any special instructions?</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+  </fieldset>
+
+  <div><button type="submit">Amend details and submit</button></div>
+</form>
+
+<p style="text-align: right;">This text is right-aligned.</p>
+
+<video id="myVideo" width="400" controls>
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p id="status">Status: Not seeking</p>
+
+        <h3>My Fun Article</h3>
+        <p id="p1">
+        You can target <i>this paragraph</i> using a URL fragment. Click on the first
+        link above to try out!
+        </p>
+        <p id="p2">
+        This is <i>another paragraph</i>, also accessible from the second link above.
+        Isn't that delightful?
+        </p>    
+    </div>   
+
+</body>
+
+</html>
