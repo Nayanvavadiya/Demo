@@ -1,3 +1,14 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+
+
 .text1{
     font-size: 90px;
     font-weight: 900;
@@ -36,21 +47,31 @@
 
 /*3rd section*/
 
-.but{
-    padding: 10px;
-    background-color: lightskyblue;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    height: 50px;
-    width: 150px;
-    margin: 0px 20px;
-    transition: all ease 0.2s;
-    border: none;
-}
 
-.but:active{
+.btn:active{
     scale: 0.9;
 }
 
+.btn {
+    padding: 10px 20px;
+    background-color: #0c6d29;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    /* margin-right: auto;
+    margin-left: auto; */
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+
+.clickbutton{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
 
